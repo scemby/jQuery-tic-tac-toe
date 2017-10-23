@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kristian Skender jQuery Tic Tac Toe game</title>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+  </head>
+
+  <style>
+    .table {
+      width: 210px;
+      table-layout: fixed;
+      border-collapse: collapse;
+    }
+
+    .table.end {
+      pointer-events: none;
+    }
+
+    .table.end td {}
+
+    td {
+      height: 70px;
+      border: 1px solid gray;
+      text-align: center;
+    }
+
+    td.won {
+      color: red;
+    }
+
+    .result {
+      margin-top: 1rem;
+      font-size: 2rem;
+    }
+
+    .reset {
+      display: inline-block;
+      padding: .5rem 1rem;
+      margin-top: 2rem;
+      background-color: gray;
+      color: white;
+      text-decoration: none;
+    }
+
+  </style>
+
+  <body>
+
+    <table class="table" data-tick-toe-wrap>
+      <tbody>
+
+        <tr>
+          <td data-tick-toe="1"></td>
+          <td data-tick-toe="2"></td>
+          <td data-tick-toe="3"></td>
+        </tr>
+
+        <tr>
+          <td data-tick-toe="4"></td>
+          <td data-tick-toe="5"></td>
+          <td data-tick-toe="6"></td>
+        </tr>
+
+        <tr>
+          <td data-tick-toe="7"></td>
+          <td data-tick-toe="8"></td>
+          <td data-tick-toe="9"></td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <div class="result" data-tick-toe-result></div>
+
+    <a class="reset" data-tick-toe-reset href="#">Restart game!</a>
+
+  </body>
+</html>
